@@ -255,7 +255,7 @@ extern void ShadePlayerReg(NSObject<FlutterPluginRegistrar>* registrar)
                                 isRemote = true;
                         } else
                         {
-                                audioFileURL = [NSURL URLWithString:path];
+                            audioFileURL = [[NSURL alloc] initFileURLWithPath:path isDirectory: NO];
                         }
                 }
 
